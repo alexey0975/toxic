@@ -6,4 +6,17 @@ html(lang="ru")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     title Toxic
   body
-    h1 Hello I am PUG
+    .logo_kit
+    h1.visually-hidden UI-kit
+    section
+      .container
+        h2.visually-hidden Colors Type
+        ul.list.list_column
+          -var colors = [{name: 'Dark Shade 100%', hash: '#1F2041', color: 'dark-shade'}, {name: 'Dark Shade 75%', hash: '#1F2041', color: 'dark-shade75'}, {name: 'Dark Shade 50%', hash: '#1F2041', color: 'dark-shade50'}, {name: 'Dark Shade 25%', hash: '#1F2041', color: 'dark-shade25'}, {name: 'Dark Shade 5%', hash: '#1F2041', color: 'dark-shade5'}, {name: 'Purple', hash: '#BC9CFF', color: 'purple'}, {name: 'Green', hash: '#6FCF97', color: 'green'}]
+          each color in colors
+            li.list__tiem
+              .color-block
+                div(class=`color-block__color color-block__color_${color.color}`)
+                .color-block__descr
+                  span.color-block__name= color.name
+                  span.color-block__hash= color.hash
