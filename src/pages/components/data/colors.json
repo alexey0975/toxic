@@ -1,0 +1,37 @@
+[
+  {
+    "name": "Dark Shade 100%",
+    "hash": "#1F2041",
+    "color": "dark-shade"
+  },
+  {
+    "name": "Dark Shade 75%",
+    "hash": "#1F2041",
+    "color": "dark-shade75"
+  },
+  {
+    "name": "Dark Shade 50%",
+    "hash": "#1F2041",
+    "color": "dark-shade50"
+  },
+  {
+    "name": "Dark Shade 25%",
+    "hash": "#1F2041",
+    "color": "dark-shade25"
+  },
+  {
+    "name": "Dark Shade 5%",
+    "hash": "#1F2041",
+    "color": "dark-shade5"
+  },
+  {
+    "name": "Purple",
+    "hash": "#BC9CFF",
+    "color": "purple"
+  },
+  {
+    "name": "Green",
+    "hash": "#6FCF97",
+    "color": "green"
+  }
+]

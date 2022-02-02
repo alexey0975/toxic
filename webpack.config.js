@@ -8,7 +8,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 const pugPagesPath = path.resolve(__dirname, 'src/pages');
 const pugPages = fs.readdirSync(pugPagesPath).filter(file => {
-  if (path.extname(file) === '.pug') return file
+  if (path.extname(file) === '.pug') return file;
 });
 
 const multipleHtmlPlugin = pugPages.map(page => {
@@ -50,18 +50,32 @@ const config = {
         test: /\.(js|jsx)$/i,
         loader: 'babel-loader',
       },
+
       {
         test: /\.s[ac]ss$/i,
         use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
       },
+
       {
-        test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$/i,
-        type: 'file-loader',
+        test: /\.(eot|ttf|woff|woff2|)$/i,
+        type: 'asset/resource',
+        generator: {
+          filename: 'fonts/[hash][ext][query]'
+        }
+      },
+
+      {
+        test: /\.(png|jpe?g|gif|svg)$/i,
+        loader: 'file-loader',
+        options: {
+          outputPath: '/img/',
+        }
+
       },
 
       {
         test: /\.pug$/,
-        loader: 'pug-loader'
+        loader: 'pug-loader',
       }
 
       // Add your rules for custom modules here

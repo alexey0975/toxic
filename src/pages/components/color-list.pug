@@ -1,0 +1,10 @@
+ul.list.list_column
+  -
+    var colors = require('./data/colors.json')
+  each color in colors
+    li.list__tiem.color-item
+      .color-block
+        div(class=`color-block__color color-block__color_${color.color}`)
+        .color-block__descr
+          span.color-block__name= color.name
+          span.color-block__hash= color.hash

@@ -1,0 +1,18 @@
+.form-elements {
+  padding: 140px 0 131px;
+  margin-bottom: 50px;
+  background-color: $white;
+
+  &__inner {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .logo {
+      position: absolute;
+      left: -120px;
+      top: -115px;
+    }
+  }
+}

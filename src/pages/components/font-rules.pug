@@ -1,0 +1,8 @@
+ul.list.list_column
+  -
+    var fontRules = require('./data/font-rules.json')
+  each rule in fontRules
+    li.list__tiem.font-rule-item
+      .font-rule
+        div(class=`font-rule__tag font-rule__tag_${rule.tag}`)= rule.tag
+        div(class=`font-rule__example font-rule__example_${rule.tag}`)= rule.text

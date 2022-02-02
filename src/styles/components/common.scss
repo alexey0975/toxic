@@ -13,6 +13,11 @@ body {
   padding: 0;
 }
 
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #e5e5e5;
+}
+
 img {
   width: 100%;
   height: 100%;
@@ -57,24 +62,4 @@ picture {
 .container {
   max-width: $containerSize;
   margin: 0 auto;
-}
-
-.color-block__color {
-  $colors: (
-    dark-shade: $darkShade,
-    dark-shade75: $darkShade75,
-    dark-shade50: $darkShade50,
-    dark-shade25: $darkShade25,
-    dark-shade5: $darkShade5,
-    purple: $purple,
-    green: $green,
-  );
-  width: 100px;
-  height: 100px;
-
-  @each $mod, $color in $colors {
-    &_#{$mod} {
-      background-color: $color;
-    }
-  }
 }

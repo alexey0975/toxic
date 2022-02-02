@@ -1,0 +1,123 @@
+@import '_variables.scss';
+
+.colors-and-type {
+  padding: 145px 0;
+  margin-bottom: 50px;
+  background-color: $white;
+
+  &__inner {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .logo {
+      position: absolute;
+      left: -120px;
+      top: -115px;
+    }
+  }
+}
+
+.color-item{
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+
+
+.color-block {
+  display: flex;
+  align-items: center;
+
+  &__color {
+    $colors: (
+      dark-shade: $darkShade,
+      dark-shade75: $darkShade75,
+      dark-shade50: $darkShade50,
+      dark-shade25: $darkShade25,
+      dark-shade5: $darkShade5,
+      purple: $purple,
+      green: $green,
+    );
+
+    width: 70px;
+    height: 70px;
+    margin-right: 40px;
+    border-radius: 6px;
+
+    @each $mod, $color in $colors {
+      &_#{$mod} {
+        background-color: $color;
+      }
+    }
+  }
+
+  &__descr {
+    display: flex;
+    flex-direction: column;
+    font-size: 19px;
+    line-height: 28px;
+    color: $darkShade;
+  }
+
+  &__name {
+    font-weight: bold;
+  }
+}
+
+.font-rule-item {
+  &:not(:last-child) {
+    margin-bottom: 52px;
+  }
+  &:nth-last-child(2) {
+    margin-bottom: 48px;
+  }
+}
+
+.font-rule {
+  display: flex;
+  justify-content: flex-end;
+
+  $tags: (
+    H1: $textSizeH1,
+    H2: $textSizeH2,
+    H3: $textSizeH3,
+    Body: $textSizeBody
+  );
+
+  &__tag {
+    margin-right: 30px;
+    color: $darkShade25;
+
+    @each $mod, $size in $tags {
+      &_#{$mod} {
+        font-size: nth($size, 1);
+        line-height: nth($size, 2);
+      }
+    }
+  }
+
+  &__example {
+    width: 377px;
+    color: $darkShade;
+    font-weight: bold;
+
+    @each $mod, $size in $tags {
+      &_#{$mod} {
+        font-size: nth($size, 1);
+        line-height: nth($size, 2);
+      }
+    }
+
+    &_Body {
+      padding-right: 60px;
+      font-weight: normal;
+      color: $darkShade75;
+    }
+
+    &_H3 {
+      text-transform: uppercase;
+    }
+  }
+}
