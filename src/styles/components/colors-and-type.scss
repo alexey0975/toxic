@@ -1,7 +1,8 @@
 @import '_variables.scss';
 
 .colors-and-type {
-  padding: 145px 0;
+  display: none;
+  padding: 145px 10px;
   margin-bottom: 50px;
   background-color: $white;
 
@@ -32,11 +33,11 @@
 
   &__color {
     $colors: (
-      dark-shade: $darkShade,
-      dark-shade75: $darkShade75,
-      dark-shade50: $darkShade50,
-      dark-shade25: $darkShade25,
-      dark-shade5: $darkShade5,
+      dark-shade: $dark,
+      dark-shade75: $dark75,
+      dark-shade50: $dark50,
+      dark-shade25: $dark25,
+      dark-shade5: $dark5,
       purple: $purple,
       green: $green,
     );
@@ -58,7 +59,7 @@
     flex-direction: column;
     font-size: 19px;
     line-height: 28px;
-    color: $darkShade;
+    color: $dark;
   }
 
   &__name {
@@ -88,7 +89,7 @@
 
   &__tag {
     margin-right: 30px;
-    color: $darkShade25;
+    color: $dark25;
 
     @each $mod, $size in $tags {
       &_#{$mod} {
@@ -100,7 +101,7 @@
 
   &__example {
     width: 377px;
-    color: $darkShade;
+    color: $dark;
     font-weight: bold;
 
     @each $mod, $size in $tags {
@@ -113,7 +114,7 @@
     &_Body {
       padding-right: 60px;
       font-weight: normal;
-      color: $darkShade75;
+      color: $dark75;
     }
 
     &_H3 {

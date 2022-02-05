@@ -1,13 +1,13 @@
-$darkShade: #1F2041;
-$darkShade75: transparentize($darkShade, 0.25);
-$darkShade50: transparentize($darkShade, 0.5);
-$darkShade25: transparentize($darkShade, 0.75);
-$darkShade5: transparentize($darkShade, 0.95);
+$dark: #1F2041;
+$dark75: transparentize($dark, 0.25);
+$dark50: transparentize($dark, 0.5);
+$dark25: transparentize($dark, 0.75);
+$dark5: transparentize($dark, 0.95);
 $purple: #BC9CFF;
 $green: #6FCF97;
 $white: #ffffff;
 
-$containerSize: 1140px;
+$containerSize: 1160px;
 
 $textSizeH1: 24px, 29px;
 $textSizeH2: 19px, 23px;

@@ -1,0 +1,109 @@
+.dropdown {
+  margin: 0;
+  padding: 0;
+  border: none;
+
+  &__title {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    padding: 0 1px;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    color: $dark;
+    text-transform: uppercase;
+  }
+
+  &__main-field {
+    position: relative;
+    &:not(:last-child) {
+      margin: 0;
+    }
+  }
+
+  &__btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: right;
+    margin: 0;
+    padding: 10px;
+    border: none;
+    font-family: "Material Icons";
+    font-size: 24px;
+    line-height: 24px;
+    color: $dark50;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    padding: 13px 15px;
+    border: 1px solid $dark50;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+
+    &:not(:last-child) {
+      margin-bottom: 7px;
+    }
+  }
+}
+
+.num-field {
+  &__input {
+    font: inherit;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    border: none;
+    background-color: transparent;
+    &:focus {
+      outline: none;
+      border-bottom: 1px solid $dark50;
+    }
+  }
+
+  &__btn {
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 20px;
+    color: $dark50;
+    background-color: transparent;
+    border: 1px solid $dark25;
+    border-radius: 22px;
+    cursor: pointer;
+    &:hover,
+    &:focus {
+      outline: none;
+      border: 1px solid $dark50;
+    }
+    &:active {
+      background-color: $dark25;
+    }
+
+    &:disabled {
+      opacity: 0.5;
+      cursor: inherit;
+      &:hover,
+      &:focus {
+        outline: none;
+        border: 1px solid $dark25;
+      }
+    }
+  }
+}

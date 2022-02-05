@@ -1,0 +1,49 @@
+@import '../variables';
+
+.text-input {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  color: $dark;
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  &__descr {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    padding: 0 1px;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+  }
+
+  &__prop {
+    font-weight: normal;
+    color: $dark50;
+  }
+
+  &__field {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid $dark25;
+    font-size: 14px;
+    line-height: 18px;
+    border-radius: 4px;
+    color: $dark75;
+
+    &::placeholder {
+      color: $dark25;
+    }
+
+    &:hover,
+    &:focus,
+    &_focus {
+      outline: none;
+      border: 1px solid $dark50;
+    }
+  }
+}

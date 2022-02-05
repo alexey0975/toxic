@@ -1,0 +1,15 @@
+fieldset.dropdown.js-dropdown
+  legend.dropdown__title Dropdown
+  .dropdown__wpapper
+    label.text-input.dropdown__main-field
+      input.text-input__field.js-dropdown-field(type="text" value="Сколько гостей" readonly)
+      button.dropdown__btn.js-dropdown-btn expand_more
+    ul.dropdown__list.js-dropdown-list
+      -var dropdownItems = ['Дети', 'Взрослые', 'Младенцы']
+      each item in dropdownItems
+        li.dropdown__item.js-dropdown-item
+          .dropdown__prop= item
+          .dropdown__prop-field.num-field
+            button.num-field__btn.js-less-btn(disabled) -
+            input.num-field__input.js-num-field(type="text" value="0")
+            button.num-field__btn.js-more-btn +

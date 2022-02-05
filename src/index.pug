@@ -18,3 +18,17 @@ html(lang="ru")
       .container.form-elements__inner
         h2.visually-hidden Form Elements
         img.logo(src=require('./assets/img/svg/logo.svg').default, alt="Логотип")
+        section.fields
+          label.text-input
+            span.text-input__descr
+              span.text-input__name Text Field
+              span.text-input__prop Default
+            input.text-input__field(type="text" placeholder="Email")
+          label.text-input
+            span.text-input__descr
+              span.text-input__name Text Field
+              span.text-input__prop Hover / Focus
+            input.text-input__field.text-input__field_focus(type="text" value="This is pretty awesome")
+          include pages/components/dropdown.pug
+        section.bool-inputs Checkboxs, RadioButtons
+        section.buttons Buttons, Links, Range

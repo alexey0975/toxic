@@ -1,18 +1,25 @@
+@import './blocks/text-input.scss';
+@import './blocks/dropdown.scss';
+
 .form-elements {
-  padding: 140px 0 131px;
+  padding: 143px 0 131px;
   margin-bottom: 50px;
   background-color: $white;
 
   &__inner {
     position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 374px 1fr 1fr;
+    column-gap: 72px;
 
     .logo {
       position: absolute;
-      left: -120px;
-      top: -115px;
+      left: -110px;
+      top: -113px;
     }
   }
+}
+
+.fields {
+  padding-right: 54px;
 }

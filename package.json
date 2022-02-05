@@ -43,6 +43,7 @@
     "webpack-dev-server": "^4.7.3"
   },
   "dependencies": {
+    "material-icons-font": "^2.1.0",
     "normalize-scss": "^7.0.1"
   }
 }
